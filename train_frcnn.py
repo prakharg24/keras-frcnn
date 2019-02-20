@@ -35,6 +35,7 @@ parser.add_option("--config_filename", dest="config_filename", help=
 				default="config.pickle")
 parser.add_option("--output_weight_path", dest="output_weight_path", help="Output path for weights.", default='./model_frcnn.hdf5')
 parser.add_option("--input_weight_path", dest="input_weight_path", help="Input path for weights. If not specified, will try to load default weights provided by keras.")
+parser.add_option("--initial_bl", type=float, dest="initial_best_loss", help="The initial value of the Best Loss", default=np.Inf)
 
 (options, args) = parser.parse_args()
 
@@ -147,7 +148,7 @@ model_rpn.compile(optimizer=optimizer, loss=[losses.rpn_loss_cls(num_anchors), l
 model_classifier.compile(optimizer=optimizer_classifier, loss=[losses.class_loss_cls, losses.class_loss_regr(len(classes_count)-1)], metrics={'dense_class_{}'.format(len(classes_count)): 'accuracy'})
 model_all.compile(optimizer='sgd', loss='mae')
 
-epoch_length = 1000
+epoch_length = 100
 num_epochs = int(options.num_epochs)
 iter_num = 0
 
@@ -156,7 +157,7 @@ rpn_accuracy_rpn_monitor = []
 rpn_accuracy_for_epoch = []
 start_time = time.time()
 
-best_loss = np.Inf
+best_loss = float(options.initial_best_loss)
 
 class_mapping_inv = {v: k for k, v in class_mapping.items()}
 print('Starting training')
@@ -166,6 +167,7 @@ vis = True
 for epoch_num in range(num_epochs):
 
 	progbar = generic_utils.Progbar(epoch_length)
+	file = open('epoch' + str(epoch_num), 'w')
 	print('Epoch {}/{}'.format(epoch_num + 1, num_epochs))
 
 	while True:
@@ -240,6 +242,7 @@ for epoch_num in range(num_epochs):
 
 			iter_num += 1
 
+			file.write(str(iter_num))
 			progbar.update(iter_num, [('rpn_cls', np.mean(losses[:iter_num, 0])), ('rpn_regr', np.mean(losses[:iter_num, 1])),
 									  ('detector_cls', np.mean(losses[:iter_num, 2])), ('detector_regr', np.mean(losses[:iter_num, 3]))])
 
@@ -277,5 +280,6 @@ for epoch_num in range(num_epochs):
 		except Exception as e:
 			print('Exception: {}'.format(e))
 			continue
+	file.close()
 
 print('Training complete, exiting.')
