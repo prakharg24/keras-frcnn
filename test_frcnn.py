@@ -12,6 +12,12 @@ from keras.layers import Input
 from keras.models import Model
 from keras_frcnn import roi_helpers
 
+# To include all library folders
+sys.path.insert(0, '../scripts/')
+
+from utils import read_json, dump_json
+from calculate_mean_ap import get_score
+
 sys.setrecursionlimit(40000)
 
 parser = OptionParser()
@@ -143,16 +149,19 @@ all_imgs = []
 
 classes = {}
 
-bbox_threshold = 0.8
+bbox_threshold = 0.4
 
 visualise = True
 
-for idx, img_name in enumerate(sorted(os.listdir(img_path))):
-	if not img_name.lower().endswith(('.bmp', '.jpeg', '.jpg', '.png', '.tif', '.tiff')):
-		continue
-	print(img_name)
+compl_data = read_json(img_path)
+compl_data = compl_data['data']
+
+print(len(compl_data))
+
+for file_info in compl_data:
 	st = time.time()
-	filepath = os.path.join(img_path,img_name)
+	filepath = file_info['image_name']
+	print(filepath)
 
 	img = cv2.imread(filepath)
 
@@ -165,7 +174,7 @@ for idx, img_name in enumerate(sorted(os.listdir(img_path))):
 	[Y1, Y2, F] = model_rpn.predict(X)
 	
 
-	R = roi_helpers.rpn_to_roi(Y1, Y2, C, K.image_dim_ordering(), overlap_thresh=0.7)
+	R = roi_helpers.rpn_to_roi(Y1, Y2, C, K.image_dim_ordering(), overlap_thresh=0.5)
 
 	# convert from (x1,y1,x2,y2) to (x,y,w,h)
 	R[:, 2] -= R[:, 0]
@@ -222,26 +231,33 @@ for idx, img_name in enumerate(sorted(os.listdir(img_path))):
 	for key in bboxes:
 		bbox = np.array(bboxes[key])
 
-		new_boxes, new_probs = roi_helpers.non_max_suppression_fast(bbox, np.array(probs[key]), overlap_thresh=0.5)
+		new_boxes, new_probs = roi_helpers.non_max_suppression_fast(bbox, np.array(probs[key]), overlap_thresh=0.3)
 		for jk in range(new_boxes.shape[0]):
 			(x1, y1, x2, y2) = new_boxes[jk,:]
 
 			(real_x1, real_y1, real_x2, real_y2) = get_real_coordinates(ratio, x1, y1, x2, y2)
+			all_dets.append([real_x1, real_y1, real_x2, real_y2, key])
 
-			cv2.rectangle(img,(real_x1, real_y1), (real_x2, real_y2), (int(class_to_color[key][0]), int(class_to_color[key][1]), int(class_to_color[key][2])),2)
+			# cv2.rectangle(img,(real_x1, real_y1), (real_x2, real_y2), (int(class_to_color[key][0]), int(class_to_color[key][1]), int(class_to_color[key][2])),2)
 
-			textLabel = '{}: {}'.format(key,int(100*new_probs[jk]))
-			all_dets.append((key,100*new_probs[jk]))
+			# textLabel = '{}: {}'.format(key,int(100*new_probs[jk]))
+			# all_dets.append((key,100*new_probs[jk]))
 
-			(retval,baseLine) = cv2.getTextSize(textLabel,cv2.FONT_HERSHEY_COMPLEX,1,1)
-			textOrg = (real_x1, real_y1-0)
+			# (retval,baseLine) = cv2.getTextSize(textLabel,cv2.FONT_HERSHEY_COMPLEX,1,1)
+			# textOrg = (real_x1, real_y1-0)
 
-			cv2.rectangle(img, (textOrg[0] - 5, textOrg[1]+baseLine - 5), (textOrg[0]+retval[0] + 5, textOrg[1]-retval[1] - 5), (0, 0, 0), 2)
-			cv2.rectangle(img, (textOrg[0] - 5,textOrg[1]+baseLine - 5), (textOrg[0]+retval[0] + 5, textOrg[1]-retval[1] - 5), (255, 255, 255), -1)
-			cv2.putText(img, textLabel, textOrg, cv2.FONT_HERSHEY_DUPLEX, 1, (0, 0, 0), 1)
+			# cv2.rectangle(img, (textOrg[0] - 5, textOrg[1]+baseLine - 5), (textOrg[0]+retval[0] + 5, textOrg[1]-retval[1] - 5), (0, 0, 0), 2)
+			# cv2.rectangle(img, (textOrg[0] - 5,textOrg[1]+baseLine - 5), (textOrg[0]+retval[0] + 5, textOrg[1]-retval[1] - 5), (255, 255, 255), -1)
+			# cv2.putText(img, textLabel, textOrg, cv2.FONT_HERSHEY_DUPLEX, 1, (0, 0, 0), 1)
+
+	file_info['pred_anno'] = all_dets
 
 	print('Elapsed time = {}'.format(time.time() - st))
-	print(all_dets)
+	# print(all_dets)
 	# cv2.imshow('img', img)
 	# cv2.waitKey(0)
-	cv2.imwrite('./result/{}.png'.format(idx),img)
+	# cv2.imwrite('./result/voc_{}.png'.format(0),img)
+
+eval_data = {}
+eval_data['data'] = compl_data
+dump_json('eval_data.json', eval_data)
