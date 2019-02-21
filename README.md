@@ -2,6 +2,9 @@
 Keras implementation of Faster R-CNN: Towards Real-Time Object Detection with Region Proposal Networks.
 cloned from https://github.com/kbardool/keras-frcnn
 
+------
+
+
 USAGE:
 - Both theano and tensorflow backends are supported. However compile times are very high in theano, and tensorflow is highly recommended.
 - `train_frcnn.py` can be used to train a model. To train on Pascal VOC data, simply do:
@@ -24,9 +27,22 @@ line containing:
 - Running `train_frcnn.py` will write weights to disk to an hdf5 file, as well as all the setting of the training run to a `pickle` file. These
 settings can then be loaded by `test_frcnn.py` for any testing.
 
-- test_frcnn.py can be used to perform inference, given pretrained weights and a config file. Specify a path to the folder containing
+~~- test_frcnn.py can be used to perform inference, given pretrained weights and a config file. Specify a path to the folder containing
+images:
+    `python test_frcnn.py -p /path/to/test_data/`~~
+
+**- test_frcnn.py can be used to perform inference, given pretrained weights and a config file. The input can be specified in two ways, as a path to the folder containing
 images:
     `python test_frcnn.py -p /path/to/test_data/`
+    or as a json file containing the path to the images
+    `python test_frcnn.py -p /path/to/json_file.json --is_fldr off`
+
+    A sample json input file is present in the folder `sample`, which can be used as a guide to create your json file for input
+
+- test_frcnn.py outputs a json file containing the resulting bounding boxes, along with their scores. A sample json output file is present in the folder `sample`. However, test_frcnn.py can also create new images, with bounding boxes, if the --save_img flag is passed.
+
+	`python test_frcnn.py -p /path/to/test_data/ --save_img on`**
+
 - Data augmentation can be applied by specifying `--hf` for horizontal flips, `--vf` for vertical flips and `--rot` for 90 degree rotations
 
 
