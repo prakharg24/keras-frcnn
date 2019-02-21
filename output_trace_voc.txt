@@ -1387,3 +1387,195 @@ Epoch 7/2000
  91/200 [============>.................] - ETA: 1:47:01 - rpn_cls: 2.5998 - rpn_regr: 0.1805 - detector_cls: 1.1854 - detector_regr: 0.3961
  92/200 [============>.................] - ETA: 1:46:00 - rpn_cls: 2.5990 - rpn_regr: 0.1809 - detector_cls: 1.1854 - detector_regr: 0.3964
  93/200 [============>.................] - ETA: 1:44:58 - rpn_cls: 2.5979 - rpn_regr: 0.1813 - detector_cls: 1.1853 - detector_regr: 0.3968
+ 94/200 [=============>................] - ETA: 1:44:02 - rpn_cls: 2.5974 - rpn_regr: 0.1817 - detector_cls: 1.1852 - detector_regr: 0.3971
+ 95/200 [=============>................] - ETA: 1:43:01 - rpn_cls: 2.5967 - rpn_regr: 0.1821 - detector_cls: 1.1851 - detector_regr: 0.3975
+ 96/200 [=============>................] - ETA: 1:42:06 - rpn_cls: 2.5965 - rpn_regr: 0.1825 - detector_cls: 1.1850 - detector_regr: 0.3978
+ 97/200 [=============>................] - ETA: 1:41:04 - rpn_cls: 2.5960 - rpn_regr: 0.1828 - detector_cls: 1.1848 - detector_regr: 0.3982
+ 98/200 [=============>................] - ETA: 1:40:03 - rpn_cls: 2.5953 - rpn_regr: 0.1832 - detector_cls: 1.1846 - detector_regr: 0.3985
+ 99/200 [=============>................] - ETA: 1:39:01 - rpn_cls: 2.5944 - rpn_regr: 0.1835 - detector_cls: 1.1844 - detector_regr: 0.3988
+100/200 [==============>...............] - ETA: 1:38:06 - rpn_cls: 2.5939 - rpn_regr: 0.1838 - detector_cls: 1.1843 - detector_regr: 0.3991
+101/200 [==============>...............] - ETA: 1:37:05 - rpn_cls: 2.5931 - rpn_regr: 0.1842 - detector_cls: 1.1841 - detector_regr: 0.3995
+102/200 [==============>...............] - ETA: 1:36:35 - rpn_cls: 2.5924 - rpn_regr: 0.1845 - detector_cls: 1.1839 - detector_regr: 0.3998
+103/200 [==============>...............] - ETA: 1:35:34 - rpn_cls: 2.5916 - rpn_regr: 0.1848 - detector_cls: 1.1837 - detector_regr: 0.4001
+104/200 [==============>...............] - ETA: 1:34:38 - rpn_cls: 2.5908 - rpn_regr: 0.1851 - detector_cls: 1.1835 - detector_regr: 0.4004
+105/200 [==============>...............] - ETA: 1:33:41 - rpn_cls: 2.5899 - rpn_regr: 0.1854 - detector_cls: 1.1833 - detector_regr: 0.4007
+106/200 [==============>...............] - ETA: 1:32:44 - rpn_cls: 2.5891 - rpn_regr: 0.1856 - detector_cls: 1.1830 - detector_regr: 0.4010
+107/200 [===============>..............] - ETA: 1:31:42 - rpn_cls: 2.5885 - rpn_regr: 0.1859 - detector_cls: 1.1828 - detector_regr: 0.4013
+108/200 [===============>..............] - ETA: 1:30:53 - rpn_cls: 2.5877 - rpn_regr: 0.1861 - detector_cls: 1.1827 - detector_regr: 0.4016
+109/200 [===============>..............] - ETA: 1:29:47 - rpn_cls: 2.5870 - rpn_regr: 0.1864 - detector_cls: 1.1825 - detector_regr: 0.4019
+110/200 [===============>..............] - ETA: 1:28:45 - rpn_cls: 2.5864 - rpn_regr: 0.1866 - detector_cls: 1.1823 - detector_regr: 0.4021
+111/200 [===============>..............] - ETA: 1:27:46 - rpn_cls: 2.5857 - rpn_regr: 0.1868 - detector_cls: 1.1821 - detector_regr: 0.4024
+112/200 [===============>..............] - ETA: 1:26:49 - rpn_cls: 2.5849 - rpn_regr: 0.1870 - detector_cls: 1.1819 - detector_regr: 0.4027
+113/200 [===============>..............] - ETA: 1:25:47 - rpn_cls: 2.5844 - rpn_regr: 0.1871 - detector_cls: 1.1817 - detector_regr: 0.4030
+114/200 [================>.............] - ETA: 1:24:45 - rpn_cls: 2.5837 - rpn_regr: 0.1873 - detector_cls: 1.1814 - detector_regr: 0.4033
+115/200 [================>.............] - ETA: 1:23:43 - rpn_cls: 2.5829 - rpn_regr: 0.1874 - detector_cls: 1.1812 - detector_regr: 0.4036
+116/200 [================>.............] - ETA: 1:22:42 - rpn_cls: 2.5820 - rpn_regr: 0.1876 - detector_cls: 1.1810 - detector_regr: 0.4038
+117/200 [================>.............] - ETA: 1:21:42 - rpn_cls: 2.5815 - rpn_regr: 0.1878 - detector_cls: 1.1807 - detector_regr: 0.4041
+118/200 [================>.............] - ETA: 1:20:41 - rpn_cls: 2.5810 - rpn_regr: 0.1879 - detector_cls: 1.1804 - detector_regr: 0.4043
+119/200 [================>.............] - ETA: 1:19:40 - rpn_cls: 2.5803 - rpn_regr: 0.1881 - detector_cls: 1.1802 - detector_regr: 0.4046
+120/200 [=================>............] - ETA: 1:18:39 - rpn_cls: 2.5796 - rpn_regr: 0.1882 - detector_cls: 1.1800 - detector_regr: 0.4048
+121/200 [=================>............] - ETA: 1:17:38 - rpn_cls: 2.5788 - rpn_regr: 0.1883 - detector_cls: 1.1798 - detector_regr: 0.4051
+122/200 [=================>............] - ETA: 1:16:38 - rpn_cls: 2.5778 - rpn_regr: 0.1885 - detector_cls: 1.1796 - detector_regr: 0.4054
+123/200 [=================>............] - ETA: 1:15:37 - rpn_cls: 2.5767 - rpn_regr: 0.1886 - detector_cls: 1.1794 - detector_regr: 0.4056
+124/200 [=================>............] - ETA: 1:14:37 - rpn_cls: 2.5759 - rpn_regr: 0.1888 - detector_cls: 1.1793 - detector_regr: 0.4058
+125/200 [=================>............] - ETA: 1:13:36 - rpn_cls: 2.5749 - rpn_regr: 0.1889 - detector_cls: 1.1793 - detector_regr: 0.4061
+126/200 [=================>............] - ETA: 1:12:36 - rpn_cls: 2.5741 - rpn_regr: 0.1891 - detector_cls: 1.1793 - detector_regr: 0.4063
+127/200 [==================>...........] - ETA: 1:11:35 - rpn_cls: 2.5733 - rpn_regr: 0.1893 - detector_cls: 1.1793 - detector_regr: 0.4066
+128/200 [==================>...........] - ETA: 1:10:35 - rpn_cls: 2.5724 - rpn_regr: 0.1894 - detector_cls: 1.1792 - detector_regr: 0.4068
+129/200 [==================>...........] - ETA: 1:09:35 - rpn_cls: 2.5717 - rpn_regr: 0.1896 - detector_cls: 1.1792 - detector_regr: 0.4070
+130/200 [==================>...........] - ETA: 1:08:32 - rpn_cls: 2.5708 - rpn_regr: 0.1898 - detector_cls: 1.1792 - detector_regr: 0.4073
+131/200 [==================>...........] - ETA: 1:07:32 - rpn_cls: 2.5698 - rpn_regr: 0.1899 - detector_cls: 1.1792 - detector_regr: 0.4075
+132/200 [==================>...........] - ETA: 1:06:32 - rpn_cls: 2.5687 - rpn_regr: 0.1900 - detector_cls: 1.1792 - detector_regr: 0.4077
+133/200 [==================>...........] - ETA: 1:05:32 - rpn_cls: 2.5676 - rpn_regr: 0.1902 - detector_cls: 1.1792 - detector_regr: 0.4079
+134/200 [===================>..........] - ETA: 1:04:32 - rpn_cls: 2.5665 - rpn_regr: 0.1903 - detector_cls: 1.1791 - detector_regr: 0.4082
+135/200 [===================>..........] - ETA: 1:03:32 - rpn_cls: 2.5654 - rpn_regr: 0.1904 - detector_cls: 1.1791 - detector_regr: 0.4084
+136/200 [===================>..........] - ETA: 1:02:33 - rpn_cls: 2.5642 - rpn_regr: 0.1905 - detector_cls: 1.1790 - detector_regr: 0.4086
+137/200 [===================>..........] - ETA: 1:01:36 - rpn_cls: 2.5633 - rpn_regr: 0.1906 - detector_cls: 1.1788 - detector_regr: 0.4088
+138/200 [===================>..........] - ETA: 1:00:36 - rpn_cls: 2.5625 - rpn_regr: 0.1907 - detector_cls: 1.1786 - detector_regr: 0.4089
+139/200 [===================>..........] - ETA: 59:36 - rpn_cls: 2.5617 - rpn_regr: 0.1908 - detector_cls: 1.1784 - detector_regr: 0.4091  
+140/200 [====================>.........] - ETA: 58:36 - rpn_cls: 2.5607 - rpn_regr: 0.1909 - detector_cls: 1.1782 - detector_regr: 0.4093
+141/200 [====================>.........] - ETA: 57:37 - rpn_cls: 2.5596 - rpn_regr: 0.1910 - detector_cls: 1.1779 - detector_regr: 0.4094
+142/200 [====================>.........] - ETA: 56:37 - rpn_cls: 2.5588 - rpn_regr: 0.1912 - detector_cls: 1.1777 - detector_regr: 0.4096
+143/200 [====================>.........] - ETA: 55:40 - rpn_cls: 2.5582 - rpn_regr: 0.1913 - detector_cls: 1.1774 - detector_regr: 0.4097
+144/200 [====================>.........] - ETA: 54:43 - rpn_cls: 2.5576 - rpn_regr: 0.1915 - detector_cls: 1.1771 - detector_regr: 0.4099
+145/200 [====================>.........] - ETA: 53:46 - rpn_cls: 2.5569 - rpn_regr: 0.1916 - detector_cls: 1.1769 - detector_regr: 0.4100
+146/200 [====================>.........] - ETA: 52:46 - rpn_cls: 2.5561 - rpn_regr: 0.1918 - detector_cls: 1.1766 - detector_regr: 0.4102
+147/200 [=====================>........] - ETA: 51:45 - rpn_cls: 2.5553 - rpn_regr: 0.1919 - detector_cls: 1.1764 - detector_regr: 0.4104
+148/200 [=====================>........] - ETA: 50:45 - rpn_cls: 2.5545 - rpn_regr: 0.1920 - detector_cls: 1.1762 - detector_regr: 0.4105
+149/200 [=====================>........] - ETA: 49:48 - rpn_cls: 2.5539 - rpn_regr: 0.1921 - detector_cls: 1.1760 - detector_regr: 0.4107
+150/200 [=====================>........] - ETA: 48:50 - rpn_cls: 2.5532 - rpn_regr: 0.1922 - detector_cls: 1.1758 - detector_regr: 0.4108
+151/200 [=====================>........] - ETA: 47:50 - rpn_cls: 2.5526 - rpn_regr: 0.1924 - detector_cls: 1.1756 - detector_regr: 0.4110
+152/200 [=====================>........] - ETA: 46:51 - rpn_cls: 2.5520 - rpn_regr: 0.1925 - detector_cls: 1.1754 - detector_regr: 0.4111
+153/200 [=====================>........] - ETA: 45:51 - rpn_cls: 2.5513 - rpn_regr: 0.1926 - detector_cls: 1.1751 - detector_regr: 0.4113
+154/200 [======================>.......] - ETA: 44:54 - rpn_cls: 2.5507 - rpn_regr: 0.1927 - detector_cls: 1.1749 - detector_regr: 0.4114
+155/200 [======================>.......] - ETA: 43:54 - rpn_cls: 2.5501 - rpn_regr: 0.1929 - detector_cls: 1.1746 - detector_regr: 0.4115
+156/200 [======================>.......] - ETA: 42:53 - rpn_cls: 2.5494 - rpn_regr: 0.1930 - detector_cls: 1.1744 - detector_regr: 0.4117
+157/200 [======================>.......] - ETA: 41:55 - rpn_cls: 2.5490 - rpn_regr: 0.1931 - detector_cls: 1.1741 - detector_regr: 0.4118
+158/200 [======================>.......] - ETA: 40:58 - rpn_cls: 2.5485 - rpn_regr: 0.1932 - detector_cls: 1.1738 - detector_regr: 0.4120
+159/200 [======================>.......] - ETA: 39:59 - rpn_cls: 2.5480 - rpn_regr: 0.1933 - detector_cls: 1.1736 - detector_regr: 0.4121
+160/200 [=======================>......] - ETA: 38:59 - rpn_cls: 2.5477 - rpn_regr: 0.1934 - detector_cls: 1.1734 - detector_regr: 0.4122
+161/200 [=======================>......] - ETA: 38:02 - rpn_cls: 2.5473 - rpn_regr: 0.1935 - detector_cls: 1.1732 - detector_regr: 0.4124
+162/200 [=======================>......] - ETA: 37:03 - rpn_cls: 2.5471 - rpn_regr: 0.1937 - detector_cls: 1.1729 - detector_regr: 0.4125
+163/200 [=======================>......] - ETA: 36:05 - rpn_cls: 2.5468 - rpn_regr: 0.1938 - detector_cls: 1.1727 - detector_regr: 0.4127
+164/200 [=======================>......] - ETA: 35:06 - rpn_cls: 2.5464 - rpn_regr: 0.1939 - detector_cls: 1.1724 - detector_regr: 0.4128
+165/200 [=======================>......] - ETA: 34:07 - rpn_cls: 2.5461 - rpn_regr: 0.1940 - detector_cls: 1.1722 - detector_regr: 0.4129
+166/200 [=======================>......] - ETA: 33:08 - rpn_cls: 2.5457 - rpn_regr: 0.1941 - detector_cls: 1.1719 - detector_regr: 0.4131
+167/200 [========================>.....] - ETA: 32:09 - rpn_cls: 2.5453 - rpn_regr: 0.1942 - detector_cls: 1.1716 - detector_regr: 0.4132
+168/200 [========================>.....] - ETA: 31:11 - rpn_cls: 2.5449 - rpn_regr: 0.1943 - detector_cls: 1.1713 - detector_regr: 0.4133
+169/200 [========================>.....] - ETA: 30:12 - rpn_cls: 2.5448 - rpn_regr: 0.1944 - detector_cls: 1.1711 - detector_regr: 0.4134
+170/200 [========================>.....] - ETA: 29:14 - rpn_cls: 2.5449 - rpn_regr: 0.1945 - detector_cls: 1.1708 - detector_regr: 0.4136
+171/200 [========================>.....] - ETA: 28:16 - rpn_cls: 2.5449 - rpn_regr: 0.1946 - detector_cls: 1.1704 - detector_regr: 0.4137
+172/200 [========================>.....] - ETA: 27:17 - rpn_cls: 2.5451 - rpn_regr: 0.1947 - detector_cls: 1.1701 - detector_regr: 0.4137
+173/200 [========================>.....] - ETA: 26:19 - rpn_cls: 2.5452 - rpn_regr: 0.1947 - detector_cls: 1.1697 - detector_regr: 0.4138
+174/200 [=========================>....] - ETA: 25:20 - rpn_cls: 2.5452 - rpn_regr: 0.1948 - detector_cls: 1.1694 - detector_regr: 0.4139
+175/200 [=========================>....] - ETA: 24:21 - rpn_cls: 2.5454 - rpn_regr: 0.1949 - detector_cls: 1.1690 - detector_regr: 0.4140
+176/200 [=========================>....] - ETA: 23:22 - rpn_cls: 2.5456 - rpn_regr: 0.1949 - detector_cls: 1.1687 - detector_regr: 0.4141
+177/200 [=========================>....] - ETA: 22:23 - rpn_cls: 2.5457 - rpn_regr: 0.1950 - detector_cls: 1.1683 - detector_regr: 0.4141
+178/200 [=========================>....] - ETA: 21:26 - rpn_cls: 2.5457 - rpn_regr: 0.1951 - detector_cls: 1.1679 - detector_regr: 0.4142
+179/200 [=========================>....] - ETA: 20:28 - rpn_cls: 2.5458 - rpn_regr: 0.1951 - detector_cls: 1.1675 - detector_regr: 0.4143
+180/200 [==========================>...] - ETA: 19:29 - rpn_cls: 2.5460 - rpn_regr: 0.1952 - detector_cls: 1.1671 - detector_regr: 0.4143
+181/200 [==========================>...] - ETA: 18:31 - rpn_cls: 2.5461 - rpn_regr: 0.1952 - detector_cls: 1.1667 - detector_regr: 0.4144
+182/200 [==========================>...] - ETA: 17:32 - rpn_cls: 2.5462 - rpn_regr: 0.1953 - detector_cls: 1.1663 - detector_regr: 0.4144
+183/200 [==========================>...] - ETA: 16:33 - rpn_cls: 2.5463 - rpn_regr: 0.1953 - detector_cls: 1.1659 - detector_regr: 0.4145
+184/200 [==========================>...] - ETA: 15:34 - rpn_cls: 2.5464 - rpn_regr: 0.1954 - detector_cls: 1.1655 - detector_regr: 0.4145
+185/200 [==========================>...] - ETA: 14:35 - rpn_cls: 2.5466 - rpn_regr: 0.1954 - detector_cls: 1.1650 - detector_regr: 0.4145
+186/200 [==========================>...] - ETA: 13:37 - rpn_cls: 2.5469 - rpn_regr: 0.1955 - detector_cls: 1.1646 - detector_regr: 0.4145
+187/200 [===========================>..] - ETA: 12:38 - rpn_cls: 2.5471 - rpn_regr: 0.1956 - detector_cls: 1.1642 - detector_regr: 0.4146
+188/200 [===========================>..] - ETA: 11:40 - rpn_cls: 2.5473 - rpn_regr: 0.1956 - detector_cls: 1.1638 - detector_regr: 0.4146
+189/200 [===========================>..] - ETA: 10:42 - rpn_cls: 2.5475 - rpn_regr: 0.1957 - detector_cls: 1.1634 - detector_regr: 0.4146
+190/200 [===========================>..] - ETA: 9:43 - rpn_cls: 2.5478 - rpn_regr: 0.1957 - detector_cls: 1.1630 - detector_regr: 0.4147 
+191/200 [===========================>..] - ETA: 8:45 - rpn_cls: 2.5480 - rpn_regr: 0.1958 - detector_cls: 1.1626 - detector_regr: 0.4147Average number of overlapping bounding boxes from RPN = 15.25 for 200 previous iterations
+
+192/200 [===========================>..] - ETA: 7:46 - rpn_cls: 2.5483 - rpn_regr: 0.1959 - detector_cls: 1.1622 - detector_regr: 0.4147
+193/200 [===========================>..] - ETA: 6:48 - rpn_cls: 2.5484 - rpn_regr: 0.1960 - detector_cls: 1.1618 - detector_regr: 0.4148
+194/200 [============================>.] - ETA: 5:49 - rpn_cls: 2.5487 - rpn_regr: 0.1961 - detector_cls: 1.1615 - detector_regr: 0.4148
+195/200 [============================>.] - ETA: 4:51 - rpn_cls: 2.5489 - rpn_regr: 0.1961 - detector_cls: 1.1611 - detector_regr: 0.4148
+196/200 [============================>.] - ETA: 3:53 - rpn_cls: 2.5490 - rpn_regr: 0.1962 - detector_cls: 1.1607 - detector_regr: 0.4149
+197/200 [============================>.] - ETA: 2:54 - rpn_cls: 2.5491 - rpn_regr: 0.1963 - detector_cls: 1.1604 - detector_regr: 0.4149
+198/200 [============================>.] - ETA: 1:56 - rpn_cls: 2.5493 - rpn_regr: 0.1963 - detector_cls: 1.1600 - detector_regr: 0.4150
+199/200 [============================>.] - ETA: 58s - rpn_cls: 2.5494 - rpn_regr: 0.1964 - detector_cls: 1.1596 - detector_regr: 0.4150 
+200/200 [==============================] - 11670s 58s/step - rpn_cls: 2.5495 - rpn_regr: 0.1965 - detector_cls: 1.1593 - detector_regr: 0.4150
+Mean number of bounding boxes from RPN overlapping ground truth boxes: 15.402985074626866
+Classifier accuracy for bounding boxes from RPN: 0.6571875
+Loss RPN classifier: 2.5702873099005865
+Loss RPN regression: 0.20883931908756495
+Loss Detector classifier: 1.0874868563422933
+Loss Detector regression: 0.4231749468296766
+Elapsed time: 11672.83932876587
+Epoch 8/2000
+
+  1/200 [..............................] - ETA: 2:39:08 - rpn_cls: 0.0024 - rpn_regr: 0.1176 - detector_cls: 1.0883 - detector_regr: 0.4411
+  2/200 [..............................] - ETA: 2:50:46 - rpn_cls: 1.0762 - rpn_regr: 0.1662 - detector_cls: 0.8169 - detector_regr: 0.3308
+  3/200 [..............................] - ETA: 2:51:35 - rpn_cls: 1.2104 - rpn_regr: 0.1677 - detector_cls: 0.9021 - detector_regr: 0.3190
+  4/200 [..............................] - ETA: 2:54:13 - rpn_cls: 1.4658 - rpn_regr: 0.1713 - detector_cls: 0.9113 - detector_regr: 0.3188
+  5/200 [..............................] - ETA: 2:55:10 - rpn_cls: 1.5767 - rpn_regr: 0.1702 - detector_cls: 0.9216 - detector_regr: 0.3252
+  6/200 [..............................] - ETA: 2:55:20 - rpn_cls: 1.5945 - rpn_regr: 0.1695 - detector_cls: 0.9183 - detector_regr: 0.3342
+  7/200 [>.............................] - ETA: 2:55:13 - rpn_cls: 1.6573 - rpn_regr: 0.1685 - detector_cls: 0.9108 - detector_regr: 0.3412
+  8/200 [>.............................] - ETA: 2:54:51 - rpn_cls: 1.7405 - rpn_regr: 0.1677 - detector_cls: 0.8998 - detector_regr: 0.3478
+  9/200 [>.............................] - ETA: 2:54:25 - rpn_cls: 1.7766 - rpn_regr: 0.1665 - detector_cls: 0.9043 - detector_regr: 0.3532
+ 10/200 [>.............................] - ETA: 2:51:33 - rpn_cls: 1.8025 - rpn_regr: 0.1657 - detector_cls: 0.9058 - detector_regr: 0.3585
+ 11/200 [>.............................] - ETA: 2:51:07 - rpn_cls: 1.8529 - rpn_regr: 0.1642 - detector_cls: 0.8995 - detector_regr: 0.3594
+ 12/200 [>.............................] - ETA: 2:51:42 - rpn_cls: 1.8825 - rpn_regr: 0.1629 - detector_cls: 0.8945 - detector_regr: 0.3603
+ 13/200 [>.............................] - ETA: 2:52:30 - rpn_cls: 1.9183 - rpn_regr: 0.1623 - detector_cls: 0.8859 - detector_regr: 0.3589
+ 14/200 [=>............................] - ETA: 2:51:40 - rpn_cls: 1.9590 - rpn_regr: 0.1618 - detector_cls: 0.8778 - detector_regr: 0.3560
+ 15/200 [=>............................] - ETA: 2:50:51 - rpn_cls: 2.0023 - rpn_regr: 0.1607 - detector_cls: 0.8677 - detector_regr: 0.3520
+ 16/200 [=>............................] - ETA: 2:51:14 - rpn_cls: 2.0304 - rpn_regr: 0.1598 - detector_cls: 0.8598 - detector_regr: 0.3490
+ 17/200 [=>............................] - ETA: 2:51:20 - rpn_cls: 2.0467 - rpn_regr: 0.1588 - detector_cls: 0.8538 - detector_regr: 0.3469
+ 18/200 [=>............................] - ETA: 2:49:08 - rpn_cls: 2.0593 - rpn_regr: 0.1577 - detector_cls: 0.8524 - detector_regr: 0.3453
+ 19/200 [=>............................] - ETA: 2:48:22 - rpn_cls: 2.0686 - rpn_regr: 0.1567 - detector_cls: 0.8528 - detector_regr: 0.3446
+ 20/200 [==>...........................] - ETA: 2:47:03 - rpn_cls: 2.0737 - rpn_regr: 0.1555 - detector_cls: 0.8539 - detector_regr: 0.3441
+ 21/200 [==>...........................] - ETA: 2:46:11 - rpn_cls: 2.0889 - rpn_regr: 0.1578 - detector_cls: 0.8529 - detector_regr: 0.3429
+ 22/200 [==>...........................] - ETA: 2:45:16 - rpn_cls: 2.0996 - rpn_regr: 0.1597 - detector_cls: 0.8516 - detector_regr: 0.3422
+ 23/200 [==>...........................] - ETA: 2:43:20 - rpn_cls: 2.1087 - rpn_regr: 0.1612 - detector_cls: 0.8508 - detector_regr: 0.3415
+ 24/200 [==>...........................] - ETA: 2:42:29 - rpn_cls: 2.1262 - rpn_regr: 0.1637 - detector_cls: 0.8486 - detector_regr: 0.3403
+ 25/200 [==>...........................] - ETA: 2:41:39 - rpn_cls: 2.1394 - rpn_regr: 0.1657 - detector_cls: 0.8478 - detector_regr: 0.3392
+ 26/200 [==>...........................] - ETA: 2:41:26 - rpn_cls: 2.1494 - rpn_regr: 0.1673 - detector_cls: 0.8474 - detector_regr: 0.3384
+ 27/200 [===>..........................] - ETA: 2:40:32 - rpn_cls: 2.1565 - rpn_regr: 0.1686 - detector_cls: 0.8480 - detector_regr: 0.3379
+ 28/200 [===>..........................] - ETA: 2:39:44 - rpn_cls: 2.1706 - rpn_regr: 0.1700 - detector_cls: 0.8494 - detector_regr: 0.3374
+ 29/200 [===>..........................] - ETA: 2:38:50 - rpn_cls: 2.1808 - rpn_regr: 0.1712 - detector_cls: 0.8518 - detector_regr: 0.3373
+ 30/200 [===>..........................] - ETA: 2:38:33 - rpn_cls: 2.1876 - rpn_regr: 0.1722 - detector_cls: 0.8545 - detector_regr: 0.3374
+ 31/200 [===>..........................] - ETA: 2:37:36 - rpn_cls: 2.1960 - rpn_regr: 0.1732 - detector_cls: 0.8563 - detector_regr: 0.3371
+ 32/200 [===>..........................] - ETA: 2:37:42 - rpn_cls: 2.2032 - rpn_regr: 0.1741 - detector_cls: 0.8580 - detector_regr: 0.3366
+ 33/200 [===>..........................] - ETA: 2:37:47 - rpn_cls: 2.2113 - rpn_regr: 0.1748 - detector_cls: 0.8588 - detector_regr: 0.3359
+ 34/200 [====>.........................] - ETA: 2:36:47 - rpn_cls: 2.2172 - rpn_regr: 0.1754 - detector_cls: 0.8596 - detector_regr: 0.3355
+ 35/200 [====>.........................] - ETA: 2:35:47 - rpn_cls: 2.2214 - rpn_regr: 0.1760 - detector_cls: 0.8610 - detector_regr: 0.3352
+ 36/200 [====>.........................] - ETA: 2:34:46 - rpn_cls: 2.2268 - rpn_regr: 0.1765 - detector_cls: 0.8623 - detector_regr: 0.3351
+ 37/200 [====>.........................] - ETA: 2:34:12 - rpn_cls: 2.2301 - rpn_regr: 0.1768 - detector_cls: 0.8636 - detector_regr: 0.3351
+ 38/200 [====>.........................] - ETA: 2:35:08 - rpn_cls: 2.2346 - rpn_regr: 0.1774 - detector_cls: 0.8642 - detector_regr: 0.3348
+ 39/200 [====>.........................] - ETA: 2:34:04 - rpn_cls: 2.2412 - rpn_regr: 0.1779 - detector_cls: 0.8649 - detector_regr: 0.3347
+ 40/200 [=====>........................] - ETA: 2:33:24 - rpn_cls: 2.2461 - rpn_regr: 0.1783 - detector_cls: 0.8655 - detector_regr: 0.3348
+ 41/200 [=====>........................] - ETA: 2:32:19 - rpn_cls: 2.2520 - rpn_regr: 0.1788 - detector_cls: 0.8658 - detector_regr: 0.3346
+ 42/200 [=====>........................] - ETA: 2:31:35 - rpn_cls: 2.2602 - rpn_regr: 0.1794 - detector_cls: 0.8662 - detector_regr: 0.3345
+ 43/200 [=====>........................] - ETA: 2:30:31 - rpn_cls: 2.2700 - rpn_regr: 0.1801 - detector_cls: 0.8660 - detector_regr: 0.3343
+ 44/200 [=====>........................] - ETA: 2:29:28 - rpn_cls: 2.2786 - rpn_regr: 0.1807 - detector_cls: 0.8657 - detector_regr: 0.3341
+ 45/200 [=====>........................] - ETA: 2:28:15 - rpn_cls: 2.2879 - rpn_regr: 0.1812 - detector_cls: 0.8658 - detector_regr: 0.3340
+ 46/200 [=====>........................] - ETA: 2:27:13 - rpn_cls: 2.2968 - rpn_regr: 0.1817 - detector_cls: 0.8661 - detector_regr: 0.3341
+ 47/200 [======>.......................] - ETA: 2:26:46 - rpn_cls: 2.3061 - rpn_regr: 0.1823 - detector_cls: 0.8667 - detector_regr: 0.3343
+ 48/200 [======>.......................] - ETA: 2:25:43 - rpn_cls: 2.3164 - rpn_regr: 0.1827 - detector_cls: 0.8671 - detector_regr: 0.3343
+ 49/200 [======>.......................] - ETA: 2:25:01 - rpn_cls: 2.3252 - rpn_regr: 0.1832 - detector_cls: 0.8675 - detector_regr: 0.3345
+ 50/200 [======>.......................] - ETA: 2:23:29 - rpn_cls: 2.3325 - rpn_regr: 0.1836 - detector_cls: 0.8677 - detector_regr: 0.3347
+ 51/200 [======>.......................] - ETA: 2:22:47 - rpn_cls: 2.3408 - rpn_regr: 0.1841 - detector_cls: 0.8676 - detector_regr: 0.3348
+ 52/200 [======>.......................] - ETA: 2:22:01 - rpn_cls: 2.3478 - rpn_regr: 0.1846 - detector_cls: 0.8675 - detector_regr: 0.3349
+ 53/200 [======>.......................] - ETA: 2:20:59 - rpn_cls: 2.3556 - rpn_regr: 0.1851 - detector_cls: 0.8676 - detector_regr: 0.3350
+ 54/200 [=======>......................] - ETA: 2:19:57 - rpn_cls: 2.3623 - rpn_regr: 0.1854 - detector_cls: 0.8677 - detector_regr: 0.3353
+ 55/200 [=======>......................] - ETA: 2:18:48 - rpn_cls: 2.3697 - rpn_regr: 0.1857 - detector_cls: 0.8680 - detector_regr: 0.3355
+ 56/200 [=======>......................] - ETA: 2:17:47 - rpn_cls: 2.3760 - rpn_regr: 0.1860 - detector_cls: 0.8683 - detector_regr: 0.3358
+ 57/200 [=======>......................] - ETA: 2:16:46 - rpn_cls: 2.3819 - rpn_regr: 0.1863 - detector_cls: 0.8685 - detector_regr: 0.3361
+ 58/200 [=======>......................] - ETA: 2:16:01 - rpn_cls: 2.3867 - rpn_regr: 0.1866 - detector_cls: 0.8688 - detector_regr: 0.3364
+ 59/200 [=======>......................] - ETA: 2:15:00 - rpn_cls: 2.3906 - rpn_regr: 0.1868 - detector_cls: 0.8692 - detector_regr: 0.3367
+ 60/200 [========>.....................] - ETA: 2:13:45 - rpn_cls: 2.3936 - rpn_regr: 0.1870 - detector_cls: 0.8697 - detector_regr: 0.3371
+ 61/200 [========>.....................] - ETA: 2:12:38 - rpn_cls: 2.3960 - rpn_regr: 0.1872 - detector_cls: 0.8700 - detector_regr: 0.3375
+ 62/200 [========>.....................] - ETA: 2:11:42 - rpn_cls: 2.3998 - rpn_regr: 0.1874 - detector_cls: 0.8704 - detector_regr: 0.3379
+ 63/200 [========>.....................] - ETA: 2:10:41 - rpn_cls: 2.4035 - rpn_regr: 0.1875 - detector_cls: 0.8707 - detector_regr: 0.3383
+ 64/200 [========>.....................] - ETA: 2:09:42 - rpn_cls: 2.4067 - rpn_regr: 0.1876 - detector_cls: 0.8709 - detector_regr: 0.3387
+ 65/200 [========>.....................] - ETA: 2:08:54 - rpn_cls: 2.4094 - rpn_regr: 0.1876 - detector_cls: 0.8711 - detector_regr: 0.3391
+ 66/200 [========>.....................] - ETA: 2:07:39 - rpn_cls: 2.4118 - rpn_regr: 0.1876 - detector_cls: 0.8712 - detector_regr: 0.3396
+ 67/200 [=========>....................] - ETA: 2:06:43 - rpn_cls: 2.4141 - rpn_regr: 0.1876 - detector_cls: 0.8713 - detector_regr: 0.3400
+ 68/200 [=========>....................] - ETA: 2:05:55 - rpn_cls: 2.4157 - rpn_regr: 0.1876 - detector_cls: 0.8713 - detector_regr: 0.3404
+ 69/200 [=========>....................] - ETA: 2:04:57 - rpn_cls: 2.4184 - rpn_regr: 0.1875 - detector_cls: 0.8712 - detector_regr: 0.3409
+ 70/200 [=========>....................] - ETA: 2:04:49 - rpn_cls: 2.4204 - rpn_regr: 0.1875 - detector_cls: 0.8711 - detector_regr: 0.3413
+ 71/200 [=========>....................] - ETA: 2:03:59 - rpn_cls: 2.4219 - rpn_regr: 0.1874 - detector_cls: 0.8710 - detector_regr: 0.3417
+ 72/200 [=========>....................] - ETA: 2:02:59 - rpn_cls: 2.4239 - rpn_regr: 0.1874 - detector_cls: 0.8709 - detector_regr: 0.3421
+ 73/200 [=========>....................] - ETA: 2:01:59 - rpn_cls: 2.4256 - rpn_regr: 0.1873 - detector_cls: 0.8709 - detector_regr: 0.3426
+ 74/200 [==========>...................] - ETA: 2:00:58 - rpn_cls: 2.4271 - rpn_regr: 0.1873 - detector_cls: 0.8709 - detector_regr: 0.3430
+ 75/200 [==========>...................] - ETA: 1:59:58 - rpn_cls: 2.4299 - rpn_regr: 0.1872 - detector_cls: 0.8709 - detector_regr: 0.3434

@@ -11,12 +11,7 @@ from keras import backend as K
 from keras.layers import Input
 from keras.models import Model
 from keras_frcnn import roi_helpers
-
-# To include all library folders
-sys.path.insert(0, '../scripts/')
-
-from utils import read_json, dump_json
-from calculate_mean_ap import get_score
+from keras_frcnn import utils
 
 sys.setrecursionlimit(40000)
 
@@ -28,13 +23,17 @@ parser.add_option("-n", "--num_rois", type="int", dest="num_rois",
 parser.add_option("--config_filename", dest="config_filename", help=
 				"Location to read the metadata related to the training (generated when training).",
 				default="config.pickle")
+parser.add_option("--save_img", dest="save_img", help="Save Images with detections", default="off")
 parser.add_option("--network", dest="network", help="Base network to use. Supports vgg or resnet50.", default='resnet50')
+
 
 (options, args) = parser.parse_args()
 
 if not options.test_path:   # if filename is not given
 	parser.error('Error: path to test data must be specified. Pass --path to command line')
 
+if(options.save_img=="on"):
+	os.makerdir('results')
 
 config_output_filename = options.config_filename
 
@@ -149,19 +148,21 @@ all_imgs = []
 
 classes = {}
 
-bbox_threshold = 0.4
+bbox_threshold = 0.8
 
 visualise = True
 
-compl_data = read_json(img_path)
-compl_data = compl_data['data']
+result_data = []
 
-print(len(compl_data))
-
-for file_info in compl_data:
+for idx, img_name in enumerate(sorted(os.listdir(img_path))):
+	if not img_name.lower().endswith(('.bmp', '.jpeg', '.jpg', '.png', '.tif', '.tiff')):
+		continue
+	print(img_name)
 	st = time.time()
-	filepath = file_info['image_name']
-	print(filepath)
+	filepath = os.path.join(img_path,img_name)
+
+	temp_dict = {}
+	temp_dict['image_name'] = filepath
 
 	img = cv2.imread(filepath)
 
@@ -202,7 +203,7 @@ for file_info in compl_data:
 
 		for ii in range(P_cls.shape[1]):
 
-			if np.max(P_cls[0, ii, :]) < bbox_threshold or np.argmax(P_cls[0, ii, :]) == (P_cls.shape[2] - 1):
+			if np.max(P_cls[0, ii, :]) < 0.1 or np.argmax(P_cls[0, ii, :]) == (P_cls.shape[2] - 1):
 				continue
 
 			cls_name = class_mapping[np.argmax(P_cls[0, ii, :])]
@@ -236,28 +237,32 @@ for file_info in compl_data:
 			(x1, y1, x2, y2) = new_boxes[jk,:]
 
 			(real_x1, real_y1, real_x2, real_y2) = get_real_coordinates(ratio, x1, y1, x2, y2)
-			all_dets.append([real_x1, real_y1, real_x2, real_y2, key])
+			all_dets.append([real_x1, real_y1, real_x2, real_y2, key, int(100*new_probs[jk])])
 
-			# cv2.rectangle(img,(real_x1, real_y1), (real_x2, real_y2), (int(class_to_color[key][0]), int(class_to_color[key][1]), int(class_to_color[key][2])),2)
+			if(options.save_img=="on" and new_probs[jk] > bbox_threshold):
+				cv2.rectangle(img,(real_x1, real_y1), (real_x2, real_y2), (int(class_to_color[key][0]), int(class_to_color[key][1]), int(class_to_color[key][2])),2)
 
-			# textLabel = '{}: {}'.format(key,int(100*new_probs[jk]))
-			# all_dets.append((key,100*new_probs[jk]))
+				textLabel = '{}: {}'.format(key,int(100*new_probs[jk]))
+				all_dets.append((key,100*new_probs[jk]))
 
-			# (retval,baseLine) = cv2.getTextSize(textLabel,cv2.FONT_HERSHEY_COMPLEX,1,1)
-			# textOrg = (real_x1, real_y1-0)
+				(retval,baseLine) = cv2.getTextSize(textLabel,cv2.FONT_HERSHEY_COMPLEX,1,1)
+				textOrg = (real_x1, real_y1-0)
 
-			# cv2.rectangle(img, (textOrg[0] - 5, textOrg[1]+baseLine - 5), (textOrg[0]+retval[0] + 5, textOrg[1]-retval[1] - 5), (0, 0, 0), 2)
-			# cv2.rectangle(img, (textOrg[0] - 5,textOrg[1]+baseLine - 5), (textOrg[0]+retval[0] + 5, textOrg[1]-retval[1] - 5), (255, 255, 255), -1)
-			# cv2.putText(img, textLabel, textOrg, cv2.FONT_HERSHEY_DUPLEX, 1, (0, 0, 0), 1)
+				cv2.rectangle(img, (textOrg[0] - 5, textOrg[1]+baseLine - 5), (textOrg[0]+retval[0] + 5, textOrg[1]-retval[1] - 5), (0, 0, 0), 2)
+				cv2.rectangle(img, (textOrg[0] - 5,textOrg[1]+baseLine - 5), (textOrg[0]+retval[0] + 5, textOrg[1]-retval[1] - 5), (255, 255, 255), -1)
+				cv2.putText(img, textLabel, textOrg, cv2.FONT_HERSHEY_DUPLEX, 1, (0, 0, 0), 1)
 
-	file_info['pred_anno'] = all_dets
+	temp_dict['pred_anno'] = all_dets
+
+	result_data.append(temp_dict)
 
 	print('Elapsed time = {}'.format(time.time() - st))
 	# print(all_dets)
 	# cv2.imshow('img', img)
 	# cv2.waitKey(0)
-	# cv2.imwrite('./result/voc_{}.png'.format(0),img)
+	if(options.save_img=="on"):
+		cv2.imwrite('./results/voc_{}.png'.format(idx),img)
 
 eval_data = {}
-eval_data['data'] = compl_data
-dump_json('eval_data.json', eval_data)
+eval_data['data'] = result_data
+utils.dump_json('eval_data.json', eval_data)

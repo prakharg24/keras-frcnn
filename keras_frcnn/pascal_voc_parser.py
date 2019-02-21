@@ -70,23 +70,26 @@ def get_data(input_path):
 
 				for element_obj in element_objs:
 					class_name = element_obj.find('name').text
-					if class_name not in classes_count:
-						classes_count[class_name] = 1
-					else:
-						classes_count[class_name] += 1
+					# if(class_name=='cow' or class_name=='dog'):
+					if(True):
+						if class_name not in classes_count:
+							classes_count[class_name] = 1
+						else:
+							classes_count[class_name] += 1
 
-					if class_name not in class_mapping:
-						class_mapping[class_name] = len(class_mapping)
+						if class_name not in class_mapping:
+							class_mapping[class_name] = len(class_mapping)
 
-					obj_bbox = element_obj.find('bndbox')
-					x1 = int(round(float(obj_bbox.find('xmin').text)))
-					y1 = int(round(float(obj_bbox.find('ymin').text)))
-					x2 = int(round(float(obj_bbox.find('xmax').text)))
-					y2 = int(round(float(obj_bbox.find('ymax').text)))
-					difficulty = int(element_obj.find('difficult').text) == 1
-					annotation_data['bboxes'].append(
-						{'class': class_name, 'x1': x1, 'x2': x2, 'y1': y1, 'y2': y2, 'difficult': difficulty})
-				all_imgs.append(annotation_data)
+						obj_bbox = element_obj.find('bndbox')
+						x1 = int(round(float(obj_bbox.find('xmin').text)))
+						y1 = int(round(float(obj_bbox.find('ymin').text)))
+						x2 = int(round(float(obj_bbox.find('xmax').text)))
+						y2 = int(round(float(obj_bbox.find('ymax').text)))
+						difficulty = int(element_obj.find('difficult').text) == 1
+						annotation_data['bboxes'].append(
+							{'class': class_name, 'x1': x1, 'x2': x2, 'y1': y1, 'y2': y2, 'difficult': difficulty})
+				if(len(annotation_data['bboxes'])>0):
+					all_imgs.append(annotation_data)
 
 				if visualise:
 					img = cv2.imread(annotation_data['filepath'])
