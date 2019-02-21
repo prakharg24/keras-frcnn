@@ -18,6 +18,7 @@ sys.setrecursionlimit(40000)
 parser = OptionParser()
 
 parser.add_option("-p", "--path", dest="test_path", help="Path to test data.")
+parser.add_option("--is_fldr", dest="is_fldr", help="Input test data is image folder or a json", default="on")
 parser.add_option("-n", "--num_rois", type="int", dest="num_rois",
 				help="Number of ROIs per iteration. Higher means more memory use.", default=32)
 parser.add_option("--config_filename", dest="config_filename", help=
@@ -154,12 +155,23 @@ visualise = True
 
 result_data = []
 
-for idx, img_name in enumerate(sorted(os.listdir(img_path))):
-	if not img_name.lower().endswith(('.bmp', '.jpeg', '.jpg', '.png', '.tif', '.tiff')):
-		continue
-	print(img_name)
+if(options.is_fldr=="on"):
+	iter_arr = sorted(os.listdir(img_path))
+else:
+	compl_data = utils.read_json(img_path)
+	iter_arr = compl_data['data']
+
+for idx, data_point in enumerate(iter_arr):
+	if(options.is_fldr=="on"):
+		img_name = data_point
+		if not img_name.lower().endswith(('.bmp', '.jpeg', '.jpg', '.png', '.tif', '.tiff')):
+			continue
+		filepath = os.path.join(img_path,img_name)
+	else:
+		filepath = data_point['image_name']
+
 	st = time.time()
-	filepath = os.path.join(img_path,img_name)
+	print(filepath)
 
 	temp_dict = {}
 	temp_dict['image_name'] = filepath
