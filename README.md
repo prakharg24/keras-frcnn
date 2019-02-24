@@ -36,12 +36,12 @@ images:
     `python test_frcnn.py -p /path/to/test_data/`
 
     or as a json file containing the path to the images
-    `python test_frcnn.py -p /path/to/json_file.json --is_json`
+    `python test_frcnn.py -p /path/to/json_file.json --inp_type json`
     
     A sample json input file is present in the folder `sample`, which can be used as a guide to create your json file for input
 
-- test_frcnn.py outputs a json file (named 'eval_data.json' in the same folder) containing the resulting bounding boxes, along with their scores. A sample json output file is present in the folder `sample`. test_frcnn.py can also create new images, with bounding boxes, if the --save_img flag is passed.
-	`python test_frcnn.py -p /path/to/test_data/ --save_img`
+- test_frcnn.py outputs a json file (named 'eval_data.json' in the same folder) containing the resulting bounding boxes, along with their scores. A sample json output file is present in the folder `sample`. test_frcnn.py can also create new images, with bounding boxes, if the --save_img flag is turned on.
+	`python test_frcnn.py -p /path/to/test_data/ --save_img on`
 
 - Data augmentation can be applied by specifying `--hf` for horizontal flips, `--vf` for vertical flips and `--rot` for 90 degree rotations. Recommended while training.
 

@@ -18,13 +18,13 @@ sys.setrecursionlimit(40000)
 parser = OptionParser()
 
 parser.add_option("-p", "--path", dest="test_path", help="Path to test data.")
-parser.add_option("--is_json", dest="is_json", help="Input test data is image folder or a json", default=True)
+parser.add_option("--inp_type", dest="inp_type", help="Input test data is image folder or a json", default="fldr")
 parser.add_option("-n", "--num_rois", type="int", dest="num_rois",
 				help="Number of ROIs per iteration. Higher means more memory use.", default=32)
 parser.add_option("--config_filename", dest="config_filename", help=
 				"Location to read the metadata related to the training (generated when training).",
 				default="config.pickle")
-parser.add_option("--save_img", dest="save_img", help="Save Images with detections", default=False)
+parser.add_option("--save_img", dest="save_img", help="Save Images with detections", default="off")
 parser.add_option("--network", dest="network", help="Base network to use. Supports vgg or resnet50.", default='resnet50')
 
 
@@ -33,7 +33,7 @@ parser.add_option("--network", dest="network", help="Base network to use. Suppor
 if not options.test_path:   # if filename is not given
 	parser.error('Error: path to test data must be specified. Pass --path to command line')
 
-if(options.save_img):
+if(options.save_img=="on"):
 	os.makerdir('results')
 
 config_output_filename = options.config_filename
@@ -155,20 +155,20 @@ visualise = True
 
 result_data = []
 
-if(options.is_json):
-	iter_arr = sorted(os.listdir(img_path))
-else:
+if(options.inp_type=="json"):
 	compl_data = utils.read_json(img_path)
 	iter_arr = compl_data['data']
+else:
+	iter_arr = sorted(os.listdir(img_path))
 
 for idx, data_point in enumerate(iter_arr):
-	if(options.is_json):
+	if(options.inp_type=="json"):
+		filepath = data_point['image_name']
+	else:
 		img_name = data_point
 		if not img_name.lower().endswith(('.bmp', '.jpeg', '.jpg', '.png', '.tif', '.tiff')):
 			continue
 		filepath = os.path.join(img_path,img_name)
-	else:
-		filepath = data_point['image_name']
 
 	st = time.time()
 	print(filepath)
@@ -251,7 +251,7 @@ for idx, data_point in enumerate(iter_arr):
 			(real_x1, real_y1, real_x2, real_y2) = get_real_coordinates(ratio, x1, y1, x2, y2)
 			all_dets.append([real_x1, real_y1, real_x2, real_y2, key, int(100*new_probs[jk])])
 
-			if(options.save_img and new_probs[jk] > bbox_threshold):
+			if(options.save_img=="on" and new_probs[jk] > bbox_threshold):
 				cv2.rectangle(img,(real_x1, real_y1), (real_x2, real_y2), (int(class_to_color[key][0]), int(class_to_color[key][1]), int(class_to_color[key][2])),2)
 
 				textLabel = '{}: {}'.format(key,int(100*new_probs[jk]))
@@ -271,7 +271,7 @@ for idx, data_point in enumerate(iter_arr):
 	print(all_dets)
 	# cv2.imshow('img', img)
 	# cv2.waitKey(0)
-	if(options.save_img):
+	if(options.save_img=="on"):
 		cv2.imwrite('./results/voc_{}.png'.format(idx),img)
 
 eval_data = {}
