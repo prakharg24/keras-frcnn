@@ -94,3 +94,6 @@ ENV/
 
 # Script files
 *.sh
+
+# Config files
+*.pickle
